@@ -1,0 +1,81 @@
+CREATE TABLE Booking(
+ book_ref VARCHAR(6) PRIMARY KEY,
+ book_date Date
+);
+
+CREATE TABLE Aircraft(
+ 	aircraft_code numeric(3) PRIMARY KEY,
+ 	name varchar(20) NOT NULL,
+	capacity numeric(100) NOT NULL,
+	range numeric NOT NULL
+);
+
+CREATE TABLE Airport(
+	airport_code varchar(3) PRIMARY KEY,
+	name varchar(20) NOT NULL,
+	city varchar(20) NOT NULL,
+	timezone varchar(10) NOT NULL
+);
+
+CREATE TABLE Contact(
+  	email varchar(20)  primary key,
+   	mobile varchar(10),
+   	phone varchar(10)
+);
+
+CREATE TABLE Passenger(
+   passenger_id numeric(6) primary key,
+   name varchar(30),
+   surname varchar(30),
+   email varchar(20) REFERENCES Contact(email)
+);
+
+CREATE TABLE Fare(
+  fare_class varchar(2) PRIMARY KEY,
+  description_fare_class varchar(256) NOT NULL
+);
+
+CREATE TABLE Flight_Status(
+	flight_status_name varchar(256) PRIMARY KEY,
+	description varchar(256) NOT NULL
+);
+
+CREATE TABLE FLIGHT_DETAILS(
+	flight_code varchar(8) primary key,
+	departure_airport varchar(3) references airport(airport_code),
+	arrival_airport varchar(3) references airport(airport_code),
+	departure_date date not null,
+	aircraft_code numeric(3) references aircraft(aircraft_code),
+	scheduled_departure_time time not null,
+	scheduled_arrival_time time  not null,
+	scheduled_duration time,
+	actual_departure_time time ,
+	actual_arrival_time time,
+	flight_status_name varchar(256) references flight_status(flight_status_name),
+	distance numeric not null
+);
+
+CREATE TABLE Ticket(
+  ticket_no numeric(13) PRIMARY KEY,
+  book_ref VARCHAR(6) REFERENCES booking(book_ref),
+	passenger_id numeric(6) references passenger(passenger_id)
+  );
+
+CREATE TABLE Boarding_Pass(
+  boarding_no numeric(6),
+  seat_no numeric(3),
+  ticket_no numeric(13) references ticket(ticket_no),
+  flight_code varchar(8) references flight_details(flight_code),
+	flight_status_name varchar(256) references flight_status(flight_status_name),
+	Constraint unique_seat_flight unique(seat_no,flight_code),
+	Constraint uqique_bo_flight unique (boarding_no,flight_code)
+  );
+
+CREATE TABLE routes(
+   book_ref VARCHAR(6) REFERENCES Booking(book_ref),
+   ticket_no numeric(13) REFERENCES Ticket(ticket_no),
+   flight_code varchar(8) REFERENCES FLIGHT_DETAILS(flight_code),
+   amount real not null ,
+   fare varchar(2) REFERENCES Fare(fare_class)
+   --Constraint route_pk primary key (book_ref,ticket_no)
+   );

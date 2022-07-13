@@ -1,0 +1,38 @@
+--select * from routes;
+----------------------------------------EX III ---------------------------------
+
+
+--select book_date from booking  where book_ref = (select book_ref from routes where flight_code = 'SFOTOK01');
+
+--select (name,surname) from passenger  where passenger_id in (select passenger_id from ticket  where book_ref= 'abc123');
+
+--select ticket.ticket_no,booking.book_ref,booking.book_date,contact.email,contact.phone from ticket
+--join passenger on ticket.passenger_id = passenger.passenger_id
+--join contact on contact.email = passenger.email
+--join booking on booking.book_ref = ticket.book_ref
+--where ticket_no = (select ticket_no from routes where  flight_code = 'SFOTOK01');
+
+--select passenger.name,passenger.surname,booking.book_date,routes.flight_code
+--from routes
+--join ticket on ticket.ticket_no = routes.ticket_no
+--join passenger on passenger.passenger_id = ticket.passenger_id
+--join booking on booking.book_ref = routes.book_ref
+--where flight_code = (
+--select flight_code from flight_details where departure_date='2022-08-15' and departure_airport = 'CRT' and  arrival_airport = 'ATH'
+--    );
+
+--select routes.flight_code,count(ticket_no) as total_tickets,flight_details.arrival_airport,airport.city from routes
+--join flight_details on flight_details.flight_code = routes.flight_code
+--join airport on airport.airport_code = flight_details.arrival_airport
+--where routes.flight_code in (
+--select flight_code from flight_details where departure_date between '2022-01-30' and '2022-12-30')
+--group by routes.flight_code,flight_details.arrival_airport,airport.city order by total_tickets desc  ;
+
+--------------------------query------------------------
+select airport.city,count(ticket_no) as total_tickets from routes
+join flight_details on flight_details.flight_code = routes.flight_code
+join airport on airport.airport_code = flight_details.arrival_airport
+where routes.flight_code in (
+select flight_code from flight_details where departure_date between '2022-01-30' and '2022-12-30')
+group by airport.city
+order by  total_tickets desc;
