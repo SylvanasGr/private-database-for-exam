@@ -1,5 +1,5 @@
 <?php
-$cn = pg_connect("host=localhost port=5432 dbname=baggelhs-bash-v3 user=postgres password=pass");
+$cn = pg_connect("host=localhost port=5432 dbname=Air_base_V2 user=postgres password=1204");
 if ($cn) {
     echo "<hr><br>";
     echo  "\n Connected to DB ";
