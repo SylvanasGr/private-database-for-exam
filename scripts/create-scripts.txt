@@ -66,7 +66,6 @@ CREATE TABLE Boarding_Pass(
   seat_no numeric(3),
   ticket_no numeric(13) references ticket(ticket_no),
   flight_code varchar(8) references flight_details(flight_code),
-	flight_status_name varchar(256) references flight_status(flight_status_name),
 	Constraint unique_seat_flight unique(seat_no,flight_code),
 	Constraint uqique_bo_flight unique (boarding_no,flight_code)
   );

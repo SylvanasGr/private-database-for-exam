@@ -1,5 +1,5 @@
 <?php
-$cn = pg_connect("host=localhost port=5432 dbname=baggelhs-bash-v3 user=postgres password=pass");
+$cn = pg_connect("host=localhost port=5432 dbname=test-bash user=postgres password=pass");
 if ($cn) {
     echo "<hr><br>";
     echo  "\n Connected to DB ";
@@ -9,21 +9,18 @@ if ($cn) {
 }
 
 $departure_date = $_POST['departure_date'];
-$departure_airport = $_POST['departure_airport'];
-$arrival_airport = $_POST['arrival_airport'];
 
-if($departure_date and $departure_airport and $arrival_airport){
-    $rq = "select flight_code from flight_details where departure_date='$departure_date' and departure_airport='$departure_airport' and arrival_airport='$arrival_airport'";
+if($departure_date){
+    $rq = "select flight_code from flight_details where departure_date='$departure_date'";
     $rq_result = pg_query($cn,$rq) or die("Something wrong.. maybe the flight doesn't exist for this data;");
     $rq_final = pg_fetch_assoc($rq_result);
     if($rq_final){
-        echo "Flight Code : {$rq_final['flight_code']}";
         $sql = "select passenger.name,passenger.surname,booking.book_date
                 from routes
                 join ticket on ticket.ticket_no = routes.ticket_no
                 join passenger on passenger.passenger_id = ticket.passenger_id
                 join booking on booking.book_ref = routes.book_ref
-                where flight_code = (
+                where flight_code in (
                 '{$rq_final['flight_code']}'
                     );";
         $findBookDateAndPassenger = pg_query($cn,$sql) or die("Something  wrong... probably wrong data.");
@@ -60,6 +57,6 @@ echo "
 <br>
 <br>
 <br>
-<a style='text-decoration: none; font-size: 35px; color:salmon; ' href='index.html'>Click here to go to the Home Page</a>";s
+<a style='text-decoration: none; font-size: 35px; color:salmon; ' href='index.html'>Click here to go to the Home Page</a>";
 
 pg_close($cn);
