@@ -46,11 +46,11 @@ CREATE TABLE FLIGHT_DETAILS(
 	arrival_airport varchar(3) references airport(airport_code),
 	departure_date date not null,
 	aircraft_code numeric(3) references aircraft(aircraft_code),
-	scheduled_departure_time time not null,
-	scheduled_arrival_time time  not null,
-	scheduled_duration time,
-	actual_departure_time time ,
-	actual_arrival_time time,
+	scheduled_departure_time timestamptz not null,
+	scheduled_arrival_time timestamptz  not null,
+	scheduled_duration timestamptz,
+	actual_departure_time timestamptz ,
+	actual_arrival_time timestamptz,
 	flight_status_name varchar(256) references flight_status(flight_status_name),
 	distance numeric not null
 );
