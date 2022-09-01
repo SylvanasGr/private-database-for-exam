@@ -9,9 +9,9 @@ if ($cn) {
 }
 
 $departure_date = $_POST['departure_date'];
-
+$departure_date = date('Y-m-d', strtotime('-1 day', strtotime($departure_date)));
 if($departure_date){
-    $rq = "select flight_code from flight_details where departure_date='$departure_date'";
+    $rq = "select flight_code from flight_details where departure_date='$departure_date' and flight_status_name = 'Arrived'";
     $rq_result = pg_query($cn,$rq) or die("Something wrong.. maybe the flight doesn't exist for this data;");
     $rq_final = pg_fetch_assoc($rq_result);
     if($rq_final){

@@ -1,5 +1,5 @@
 <?php
-$cn = pg_connect("host=localhost port=5432 dbname=Air_base_V2 user=postgres password=1204");
+$cn = pg_connect("host=localhost port=5432 dbname=test-bash user=postgres password=pass");
 if ($cn) {
     echo "<hr><br>";
     echo  "\n Connected to DB ";
@@ -43,3 +43,4 @@ echo "
 <a style='text-decoration: none; font-size: 35px; color:salmon; ' href='index.html'>Click here to go to the Home Page</a>";
 
 pg_close($cn);
+
