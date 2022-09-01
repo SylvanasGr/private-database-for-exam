@@ -1,5 +1,5 @@
 <?php
-$cn = pg_connect("host=localhost port=5432 dbname=test-bash user=postgres password=pass");
+$cn = pg_connect("host=localhost port=5432 dbname=test-bash2 user=postgres password=pass");
 if ($cn) {
     echo "<hr><br>";
     echo  "\n Connected to DB ";

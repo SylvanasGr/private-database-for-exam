@@ -75,6 +75,6 @@ CREATE TABLE routes(
    ticket_no numeric(13) REFERENCES Ticket(ticket_no),
    flight_code varchar(8) REFERENCES FLIGHT_DETAILS(flight_code),
    amount real not null ,
-   fare varchar(2) REFERENCES Fare(fare_class)
-   --Constraint route_pk primary key (book_ref,ticket_no)
-   );
+   fare varchar(2) REFERENCES Fare(fare_class),
+   Constraint unique_book_ticket_flight unique (book_ref,ticket_no,flight_code));
+   
