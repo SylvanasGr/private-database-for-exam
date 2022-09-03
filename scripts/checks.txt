@@ -1,4 +1,3 @@
-//scirpt gia na mn einai isa ta aerodromia
 
 create or replace function notEqualAirports(x varchar,y varchar) returns boolean as $$
 begin
@@ -11,11 +10,9 @@ end;
 $$ language plpgsql;
 
 
-//pros8eteis tn elegxo sta aerodromia 
 alter table flight_details add check(notEqualAirports(departure_airport,arrival_airport));
 
 
-//elegxos gia na mn einai to h apostash pthsh megaluterh apo tn distance pu mporei na paei to aeroplano
 
 create or replace function checkDistance(airplaneCode numeric)returns numeric as $$
 declare 
@@ -30,10 +27,8 @@ end;
 $$ language plpgsql;
 
 
-//pros8etei ton elegxo gia to distance
 alter table flight_details add check (distance < checkDistance(aircraft_code));
 
-//elegxos wste h karta pthshs na briskete se katastash Delayed h OnTime
 create or replace function boardingForOnTimeOrDelayed(flight_code_check varchar) returns numeric as $$
 declare isOnTimeOrDelayed numeric;
 begin
@@ -47,10 +42,9 @@ return isOnTimeOrDelayed;
 end;
 $$ language plpgsql;
 
-//pros8etei ton elegxo gia tn katastash ths pthshs
 alter table boarding_pass add check(boardingForOnTimeOrDelayed(flight_code) > 0);
 
-//elegxos gia oi 8eseis to boarding_pass na einai ligoteres h ises apo oses mporei to capacity tou aeroplanou
+
 create or replace function boardingSeatsMustBeEqualOrLowerFromSpecificAircraft(flight_code_check varchar) returns boolean as $$
 declare totalSeat numeric;
 declare airplaneCapacity numeric;
@@ -73,5 +67,5 @@ begin
 end;
 $$ language plpgsql;
 
-//pros8etei ton elegxo gia tis 8eseis sto boarding pass
+
 alter table boarding_pass add check(boardingSeatsMustBeEqualOrLowerFromSpecificAircraft(flight_code));

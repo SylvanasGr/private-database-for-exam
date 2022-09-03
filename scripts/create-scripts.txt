@@ -1,6 +1,6 @@
 CREATE TABLE Booking(
  book_ref VARCHAR(6) PRIMARY KEY,
- book_date Date
+ book_date Date NOT NULL
 );
 
 CREATE TABLE Aircraft(
@@ -19,14 +19,14 @@ CREATE TABLE Airport(
 
 CREATE TABLE Contact(
   	email varchar(20)  primary key,
-   	mobile varchar(10),
+   	mobile varchar(10) NOT NULL,
    	phone varchar(10)
 );
 
 CREATE TABLE Passenger(
    passenger_id numeric(6) primary key,
-   name varchar(30),
-   surname varchar(30),
+   name varchar(30) NOT NULL,
+   surname varchar(30) NOT NULL,
    email varchar(20) REFERENCES Contact(email)
 );
 
@@ -47,7 +47,7 @@ CREATE TABLE FLIGHT_DETAILS(
 	departure_date date not null,
 	aircraft_code numeric(3) references aircraft(aircraft_code),
 	scheduled_departure_time timestamptz not null,
-	scheduled_arrival_time timestamptz  not null,
+	scheduled_arrival_time timestamptz,
 	scheduled_duration timestamptz,
 	actual_departure_time timestamptz ,
 	actual_arrival_time timestamptz,
@@ -62,8 +62,8 @@ CREATE TABLE Ticket(
   );
 
 CREATE TABLE Boarding_Pass(
-  boarding_no numeric(6),
-  seat_no numeric(3),
+  boarding_no numeric(6) NOT NULL,
+  seat_no numeric(3) NOT NULL,
   ticket_no numeric(13) references ticket(ticket_no),
   flight_code varchar(8) references flight_details(flight_code),
 	Constraint unique_seat_flight unique(seat_no,flight_code),

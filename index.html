@@ -15,7 +15,7 @@
         <form id="airports-help" class="search" action="http://localhost/php_labs/database-ticket-impl/showAirports.php"
             method="post" name="airports-help">
             <h1>If you want to find all the airports press the button bellow!</h1>
-            <button class="btn" type="submit">Show me Airports</button>
+            <button class="btn" type="submit">Show me all the  Airports</button>
         </form>
     </div>
 
@@ -23,12 +23,12 @@
         <h1>1ο Ερώτημα</h1>
         <h3>Ποιος ταξίδεψε με μια συγκεκριμένη πτήση (π.χ. PG0404) χθες και πότε έγινε η κράτηση
             του εισιτηρίου; Την ημερομηνία θα την παρέχει ο χρήστης της εφαρμογής.</h3>
-            <form id="search" class="search" action="http://localhost/php_labs/database-ticket-impl/first.php"
-                method="post" name="search">
-                <label for="departure_date"><strong>Departure Date</strong>:</label>
-                <input type="date"  name="departure_date" value="2022-08-15">
-                <button class="btn" type="submit">Sumbit</button>
-            </form>
+        <form id="search" class="search" action="http://localhost/php_labs/database-ticket-impl/first.php" method="post"
+            name="search">
+            <label for="departure_date"><strong>Departure Date</strong>:</label>
+            <input type="date" name="departure_date" value="2022-09-15">
+            <button class="btn" type="submit">Sumbit</button>
+        </form>
     </div>
 
     <div class="generic-div">
@@ -36,24 +36,23 @@
         <h3>Βρείτε τους 5 πιο δημοφιλείς προορισμούς μέσα στο εκάστοτε έτος, δηλαδή τις πόλεις
             προς τις οποίες ταξίδεψαν οι περισσότεροι επιβάτες. Το έτος θα το παρέχει ο χρήστης της
             εφαρμογής.</h3>
-            <form id="search" class="search" action="http://localhost/php_labs/database-ticket-impl/second.php"
-                method="post" name="search">
-                <h1>Find the top 5 destinations for the year of you choice!</h1>
-                <br>
-               <select name="dateForSecond" id="dateForSecond">
+        <form id="search" class="search" action="http://localhost/php_labs/database-ticket-impl/second.php"
+            method="post" name="search">
+            <h1>Find the top 5 destinations for the year of you choice!</h1>
+            <br>
+            <select name="dateForSecond" id="dateForSecond">
                 <option value="2018">2018</option>
                 <option value="2019">2019</option>
                 <option value="2020">2020</option>
                 <option value="2021">2021</option>
                 <option value="2022">2022</option>
                 <option value="2023">2023</option>
-               </select>
-               <br>
-               <br>
-                <button class="btn" type="submit">Sumbit</button>
-            </form>
+            </select>
+            <br>
+            <br>
+            <button class="btn" type="submit">Sumbit</button>
+        </form>
     </div>
-
 
     <div class="generic-div">
         <h1>3ο Ερώτημα</h1>
@@ -61,32 +60,31 @@
             Χρησιμοποιήστε τη σχέση (πίνακα) της βάσης σας, ο οποίος περιέχει τις πληροφορίες για
             τα αεροσκάφη και μέσω μιας φόρμας θα παρέχεται η δυνατότητα
             εισαγωγής/διαγραφής/ενημέρωσης μιας εγγραφής του.</h3>
-            <form id="search" class="search" action="http://localhost/php_labs/database-ticket-impl/third.php"
-                method="post" name="search">
-                <label for="aircraft_code"><strong>Aircraft Code</strong>:</label>
-                <input type="number"  name="aircraft_code" placeholder="999" >
-                <br>
-                <br>
-                <label for="aircraft_name"><strong>Name</strong>: </label>
-                <input type="text" placeholder="Airplane 999" name="aircraft_name">
-                <br>
-                <br>
-                <label for="aircraft_capacity"><strong>Capacity</strong>:</label>
-                <input type="number" placeholder="500" name="aircraft_capacity">
-                <br>
-                <br>
-                <label for="aircraft_range"><strong>Range</strong>(km):</label>
-                <input type="number" placeholder="10000" name="aircraft_range">
-                <br>
-                <br>
-                <button class="btn" type="submit" value="saveupdate" name="btn-value">Sumbit</button>
-                <button class="btn" type="submit" value="showall"  style="background-color: lightblue" name="btn-value">Show me all the Aircrafts</button>
-                <button class="btn" type="sumbit" value="deleteAir" style="background-color: red" name="btn-value">Delete</button>
-            </form>
+        <form id="search" class="search" action="http://localhost/php_labs/database-ticket-impl/third.php" method="post"
+            name="search">
+            <label for="aircraft_code"><strong>Aircraft Code</strong>:</label>
+            <input type="number" name="aircraft_code" placeholder="999">
+            <br>
+            <br>
+            <label for="aircraft_name"><strong>Name</strong>: </label>
+            <input type="text" placeholder="Airplane 999" name="aircraft_name">
+            <br>
+            <br>
+            <label for="aircraft_capacity"><strong>Capacity</strong>:</label>
+            <input type="number" placeholder="500" name="aircraft_capacity">
+            <br>
+            <br>
+            <label for="aircraft_range"><strong>Range</strong>(km):</label>
+            <input type="number" placeholder="10000" name="aircraft_range">
+            <br>
+            <br>
+            <button class="btn" type="submit" value="saveupdate" name="btn-value">Sumbit</button>
+            <button class="btn" type="submit" value="showall" style="background-color: lightblue" name="btn-value">Show
+                me all the Aircrafts</button>
+            <button class="btn" type="sumbit" value="deleteAir" style="background-color: red"
+                name="btn-value">Delete</button>
+        </form>
     </div>
 </body>
 
-<!-- geia sou baggelh ,sbhse me eimai ena comment -->
-
 </html>
-

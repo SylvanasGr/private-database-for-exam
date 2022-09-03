@@ -1,5 +1,5 @@
 <?php
-$cn = pg_connect("host=localhost port=5432 dbname=test-bash2 user=postgres password=pass");
+$cn = pg_connect("host=localhost port=5432 dbname=before-change user=postgres password=pass");
 if ($cn) {
     echo "<hr><br>";
     echo  "\n Connected to DB ";
@@ -56,11 +56,9 @@ if ($btn_value == 'deleteAir') {
     $del_result = pg_query($cn, $del) or die("Something wrong..");
 
     if($del_result == true){
-        echo "btn = $btn_value and aicraft = $code";
-    }
-    
+        echo "aicraft = $code deleted successfully!!";
+    }  
 }
-
 
 echo "
 <br>

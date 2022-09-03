@@ -2,68 +2,68 @@
 ------------------------INSERT CONTACT TO DATABASE---------------------------
 
 insert into contact(email,mobile,phone)
-  values('kon@unipi','vodafone','6956464025');
+  values('kon@unipi','6981212123','2104040111');
 
 insert into contact(email,mobile,phone)
-  values('vag@unipi','vodafone','6943061402');
+  values('vag@unipi','6981212124','2104040112');
 
 insert into contact(email,mobile,phone)
-	values('stath@unipi.gr','cosmote','69781402');
+	values('stath@unipi.gr','6981212125','2104040113');
 
 insert into contact(email,mobile,phone)
-	values('gerobil@unipi.gr','cosmote','69478182');
+	values('gerobil@unipi.gr','6981212126','2104040114');
 
 insert into contact(email,mobile,phone)
-	values('aggeliki@unipi.gr','cosmote','69478882');
+	values('aggeliki@unipi.gr','6981212127','2104040115');
 
 insert into contact(email,mobile,phone)
-	values('tasos@unipi.gr','wind','6944491829');
+	values('tasos@unipi.gr','6981212128','2104040116');
 
 insert into contact(email,mobile,phone)
-	values('papadops@gmail.com','wind','694318829');
+	values('papadops@gmail.com','6981212129','2104040117');
 
 insert into contact(email,mobile,phone)
-	values('Andreou@gmail.com','cosmote','694831429');
+	values('Andreou@gmail.com','6981212130','2104040118');
 
 insert into contact(email,mobile,phone)
-	values('birbou@hotmail.com','cosmote','694915477');
+	values('birbou@hotmail.com','6981212131','2104040119');
 
 insert into contact(email,mobile,phone)
-	values('georgiou@gmail.com','wind','695554929');
+	values('georgiou@gmail.com','6981212132','2104040120');
 
   --select * from contact;
   ------------------------INSERT PASSENGERS TO DATABASE----------------------
 
 
 insert into passenger(passenger_id,name,surname, email)
-  values('1','Vagelis','kormazos','kon@unipi');
+  values('1','Vagelis','Kormazos','kon@unipi');
 
 insert into passenger(passenger_id,name,surname,email)
-  values('2','Kostas','kolios','vag@unipi');
+  values('2','Kostas','Kolios','vag@unipi');
 
 insert into passenger(passenger_id,name,surname,email)
-	values('3','Stathis','karadimitriou','stath@unipi.gr');
+	values('3','Stathis','Karadimitriou','stath@unipi.gr');
 
 insert into passenger(passenger_id,name,surname,email)
-  values('4','vasilis','gerovasilis','gerobil@unipi.gr');
+  values('4','Vasilis','Gerovasilis','gerobil@unipi.gr');
 
 insert into passenger(passenger_id,name,surname,email)
-  values('5','aggeliki','kati','aggeliki@unipi.gr');
+  values('5','Aggeliki','Aggelopoulou','aggeliki@unipi.gr');
 
 insert into passenger(passenger_id,name,surname,email)
-  values('6','tasos','kati','tasos@unipi.gr');
+  values('6','Tasos','Tasopoulos','tasos@unipi.gr');
 
 insert into passenger(passenger_id,name,surname,email)
-  values('7','nikos','papadopoulos','papadops@gmail.com');
+  values('7','Nikos','Papadopoulos','papadops@gmail.com');
 
 insert into passenger(passenger_id,name,surname,email)
-  values('8','nikos','andreou','Andreou@gmail.com');
+  values('8','Nikos','Andreou','Andreou@gmail.com');
 
 insert into passenger(passenger_id,name,surname,email)
-  values('9','maria','birbou','birbou@hotmail.com');
+  values('9','Maria','Birbou','birbou@hotmail.com');
 
 insert into passenger(passenger_id,name,surname,email)
-  values('10','marlen','georgiou','georgiou@gmail.com');
+  values('10','Marlen','Georgiou','georgiou@gmail.com');
 
 
   --select * from passenger;
@@ -103,7 +103,7 @@ insert into passenger(passenger_id,name,surname,email)
     values(172,'Cessna',4,500);
 
   --select * from aircraft;
-    ------------------------INSERT AIRCAFTS TO DATABASE---------------------------
+    ------------------------INSERT AIRPORTS TO DATABASE---------------------------
 
   insert into airport(airport_code,name,city,timezone)
     values('APN','spain airport','Spain','utc +4');
@@ -200,79 +200,85 @@ insert into fare(fare_class,description_fare_class)
 
 --select * from fare;
 ------------------------INSERT FLIGHT DETAILS TO DATABASE----------------------
-  insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-    values ('MCHSFO01','MCH','SFO','2022-12-24',900,'07:10:00','13:30:00','06:20:00','07:10:00','13:35:00','Scheduled',6000);
-
-  insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-      values ('ZRCMCH01','ZRC','MCH','2022-09-20',350,'11:30:00','12:50:00','01:50:00','11:30:00','13:05:00','Scheduled',1000);
-
-  insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-    values ('MCHSFO02','MCH','SFO','2022-12-24',900,'14:00:00','20:20:00','06:00:00','14:04:00','20:45:00','Scheduled',6000);
-
-  insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-    values ('SFOTOK01','SFO','TOK','2022-12-25',900,'21:00:00','02:15:00','04:15:00','21:00:00','02:15:00','Scheduled',5500);
--------------
-insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-  values ('ATHSNT01','ATH','SNT','2022-08-15',900,'07:00:00','07:40:00','00:40:00','07:00:00','07:43:00','Scheduled',500);
 
 insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-  values ('SNTATH01','SNT','ATH','2022-08-15',900,'20:20:00','21:00:00','00:40:00','20:20:00','21:03:00','Scheduled',500);
+  values ('MCHSFO01','MCH','SFO','2022-09-24',900,'2022-09-24 07:10:00 UTC','2022-09-24 13:30:00 UTC','2022-09-24 06:20:00 UTC','2022-09-24 07:10:00 UTC','2022-09-24 13:35:00 UTC','Scheduled',6000);
 
 insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-  values ('ATHCRT01','ATH','CRT','2022-08-15',400,'08:00:00','08:35:00','00:35:00','08:00:00','08:43:00','Scheduled',500);
+    values ('ZRCMCH01','ZRC','MCH','2022-09-20',350,'2022-09-20 11:30:00 UTC','2022-09-20 12:50:00 UTC','2022-09-20 01:50:00 UTC','2022-09-20 11:30:00 UTC','2022-09-20 13:05:00 UTC','Scheduled',1000);
+-----
+insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
+  values ('MCHSFO02','MCH','SFO','2022-12-24',900,'2022-12-24 14:00:00 UTC','2022-12-24 20:20:00 UTC','2022-12-24 06:00:00 UTC','2022-12-24 14:04:00 UTC','2022-12-24 20:45:00 UTC','Cancelled',6000);
 
 insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-  values ('CRTATH01','CRT','ATH','2022-08-15',400,'20:45:00','21:30:00','00:45:00','20:45:00','21:30:00','Scheduled',500);
+  values ('SFOTOK01','SFO','TOK','2022-12-25',900,'2022-12-25 21:00:00 UTC','2022-12-25 02:15:00 UTC','2022-12-25 04:15:00 UTC','2022-12-25 21:00:00 UTC','2022-12-25 02:15:00 UTC','Cancelled',5500);
+-----
+insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
+values ('ATHSNT01','ATH','SNT','2022-08-15',900,'2022-08-15 07:00:00 UTC','2022-08-15 07:40:00 UTC','2022-08-15 00:40:00 UTC','2022-08-15 07:00:00 UTC','2022-08-15 07:43:00 UTC','Arrived',500);
 
 insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-  values ('MCHCRT01','MCH','CRT','2022-08-15',767,'10:20:00','13:35:00','03:55:00','10:20:00','13:43:00','Scheduled',2500);
+values ('SNTATH01','SNT','ATH','2022-08-15',900,'2022-08-15 20:20:00 UTC','2022-08-15 21:00:00 UTC','2022-08-15 00:40:00 UTC','2022-08-15 20:20:00 UTC','2022-08-15 21:03:00 UTC','Arrived',500);
 
 insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-  values ('AMSATH01','AMS','ATH','2022-08-14',400,'21:45:00','00:30:00','03:45:00','21:45:00','00:30:00','Scheduled',2500);
+values ('ATHCRT01','ATH','CRT','2022-08-15',400,'2022-08-15 08:00:00 UTC','2022-08-15 08:35:00 UTC','2022-08-15 00:35:00 UTC','2022-08-15 08:00:00 UTC','2022-08-15 08:43:00 UTC','Arrived',500);
 
 insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-  values ('SKGCRT01','SKG','CRT','2022-08-14',400,'08:00:00','08:35:00','00:35:00','08:00:00','08:43:00','Scheduled',500);
+values ('CRTATH01','CRT','ATH','2022-08-15',400,'2022-08-15 20:45:00 UTC','2022-08-15 21:30:00 UTC','2022-08-15 00:45:00 UTC','2022-08-15 20:45:00 UTC','2022-08-15 21:30:00 UTC','Arrived',500);
 
 insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-  values ('TOKSNT01','TOK','SNT','2022-08-14',900,'00:00:00','15:40:00','15:40:00','00:00:00','15:40:00','Scheduled',10500);
+values ('MCHCRT01','MCH','CRT','2022-08-15',767,'2022-08-15 10:20:00 UTC','2022-08-15 13:35:00 UTC','2022-08-15 03:55:00 UTC','2022-08-15 10:20:00 UTC','2022-08-15 13:43:00 UTC','Arrived',2500);
 
 insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-  values ('MDRSKG01','MDR','SKG','2022-08-13',400,'06:00:00','09:35:00','03:35:00','06:00:00','09:35:00','Scheduled',500);
-----
-insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-  values ('HTHCRT01','HTH','CRT','2022-08-10',767,'09:15:00','12:00:00','02:45:00','09:15:00','12:20:00','Scheduled',2300);
+values ('AMSATH01','AMS','ATH','2022-08-14',400,' 2022-08-14 21:45:00 UTC','2022-08-14 00:30:00 UTC','2022-08-14 03:45:00 UTC','2022-08-14 21:45:00 UTC','2022-08-14 00:30:00 UTC','Arrived',2500);
 
 insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-  values ('LTNATH01','LTN','ATH','2022-08-11',767,'08:15:00','11:00:00','02:45:00','08:15:00','11:22:00','Scheduled',2310);
+values ('SKGCRT01','SKG','CRT','2022-08-14',400,'2022-08-14 08:00:00 UTC','2022-08-14 08:35:00 UTC','2022-08-14 00:35:00 UTC','2022-08-14 08:00:00 UTC','2022-08-14 08:43:00 UTC','Arrived',500);
+
+--insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
+-----values ('TOKSNT01','TOK','SNT','2022-08-14',900,'2022-08-14 00:00:00 UTC','2022-08-14 15:40:00 UTC','2022-08-14 15:40:00 UTC','2022-08-14 00:00:00 UTC','2022-08-14 15:40:00 UTC','Arrived',10500);
 
 insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-  values ('GTWATH01','GTW','ATH','2022-08-13',767,'08:15:00','11:00:00','02:45:00','08:15:00','11:22:00','Scheduled',2310);
+values ('MDRSKG01','MDR','SKG','2022-08-13',400,'2022-08-13 06:00:00 UTC','2022-08-13 09:35:00 UTC','2022-08-13 03:35:00 UTC','2022-08-13 06:00:00 UTC','2022-08-13 09:35:00 UTC','Arrived',500);
 
 insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-  values ('GTWMCH01','GTW','MCH','2022-08-11',767,'08:15:00','09:15:00','01:0:00','08:15:00','09:15:00','Scheduled',600);
+values ('HTHCRT01','HTH','CRT','2022-08-10',767,'2022-08-10 09:15:00 UTC','2022-08-10 12:00:00 UTC','2022-08-10 02:45:00 UTC','2022-08-10 09:15:00 UTC','2022-08-10 12:20:00 UTC','Arrived',2300);
 
 insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-  values ('MCHGTW01','GTW','MCH','2022-08-12',767,'08:15:00','09:15:00','01:0:00','08:15:00','09:15:00','Scheduled',600);
+values ('LTNATH01','LTN','ATH','2022-08-11',767,'2022-08-11 08:15:00 UTC','2022-08-11 11:00:00 UTC','2022-08-11 02:45:00 UTC','2022-08-11 08:15:00 UTC','2022-08-11 11:22:00 UTC','Arrived',2310);
 
 insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-  values ('ATHHTH01','GTW','HTH','2022-08-19',767,'17:15:00','20:35:00','03:20:00','17:15:00','20:35:00','Scheduled',2310);
+values ('GTWATH01','GTW','ATH','2022-08-13',767,'2022-08-13 08:15:00 UTC','2022-08-13 11:00:00 UTC','2022-08-13 02:45:00 UTC','2022-08-13 08:15:00 UTC','2022-08-13 11:22:00 UTC','Arrived',2310);
 
-  insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
-            values ('MDRLTN01','MDR','LTN','2022-08-12',767,'09:15:00','11:00:00','02:45:00','09:15:00','11:22:00','Scheduled',1310);
+insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
+values ('GTWMCH01','GTW','MCH','2022-08-11',767,'2022-08-11 08:15:00 UTC','2022-08-11 09:15:00 UTC','2022-08-11 01:0:00 UTC','2022-08-11 08:15:00 UTC','2022-08-11 09:15:00 UTC','Arrived',600);
+
+insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
+values ('MCHGTW01','GTW','MCH','2022-08-12',767,'2022-08-12 08:15:00 UTC','2022-08-12 09:15:00 UTC','2022-08-12 01:0:00 UTC','2022-08-12 08:15:00 UTC','2022-08-12 09:15:00 UTC','Arrived',600);
+
+insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
+values ('ATHHTH01','GTW','HTH','2022-08-19',767,'2022-08-19 17:15:00 UTC','2022-08-19 20:35:00 UTC','2022-08-19 03:20:00 UTC','2022-08-19 17:15:00 UTC','2022-08-19 20:35:00 UTC','Arrived',2310);
+
+insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
+values ('MDRLTN01','MDR','LTN','2022-08-12',767,'2022-08-12 09:15:00 UTC','2022-08-12 11:00:00 UTC','2022-08-12 02:45:00 UTC','2022-08-12 09:15:00 UTC','2022-08-12 11:22:00 UTC','Arrived',1310);
+
+insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
+values ('SPNATH01','SPN','ATH','2022-09-14',767,'2022-09-14 07:10:00 UTC','2022-09-14 13:30:00 UTC','2022-09-14 06:20:00 UTC','2022-09-14 07:10:00 UTC','2022-09-14 13:35:00 UTC','OnTime',1500);
+
+--select * from flight_details;
   --------------------INSERT BOOKING TO DATABASE----------------------------------
 
 insert into booking(book_ref,book_date)
-  values('abc123','2002-01-01');
+  values('SFTO01','2022-01-01');
 
 insert into booking(book_ref,book_date)
-  values('xxx123','2002-01-01');
+  values('MCSF02','2022-08-15');
 
 insert into booking(book_ref,book_date)
-  values('aaa123','2002-01-01');
+  values('ZRMC01','2022-12-13');
 
 insert into booking(book_ref,book_date)
   values('SFAM02','2022-05-29');
-  --------
+
 insert into booking(book_ref,book_date)
   values('TKAT02','2022-05-23');
 
@@ -286,6 +292,9 @@ insert into booking(book_ref,book_date)
   values('MCCR02','2022-01-02');
 
 insert into booking(book_ref,book_date)
+  values('MDSK03','2022-01-04');
+
+insert into booking(book_ref,book_date)
   values('ATHT01','2022-03-02');
 
 insert into booking(book_ref,book_date)
@@ -297,34 +306,69 @@ insert into booking(book_ref,book_date)
 insert into booking(book_ref,book_date)
   values('CRHT02','2022-05-20');
 
-  insert into booking(book_ref,book_date)
-          values('MDLT01','2022-04-25');
+insert into booking(book_ref,book_date)
+  values('MDLT01','2022-04-25');
+
+insert into booking(book_ref,book_date)
+  values('SPAT01','2022-05-10');
+
+insert into booking(book_ref,book_date)
+  values('SPAT02','2022-03-11');
+
+insert into booking(book_ref,book_date)
+values('SPAT03','2022-04-10');
+
+insert into booking(book_ref,book_date)
+  values('SPAT06','2022-03-10');
+
+insert into booking(book_ref,book_date)
+  values('SPAT04','2022-03-26');
+
+insert into booking(book_ref,book_date)
+  values('SPAT05','2022-06-21');
+
+insert into booking(book_ref,book_date)
+  values('SPAT07','2022-09-11');
+
+insert into booking(book_ref,book_date)
+  values('SPAT08','2022-09-11');
+
+insert into booking(book_ref,book_date)
+  values('SPAT09','2022-06-28');
+
+insert into booking(book_ref,book_date)
+  values('MCCR01','2022-09-21');
+
+insert into booking(book_ref,book_date)
+  values('SPAT10','2022-09-22');
+
+
   --select * from booking;
 -------------------------------INSERT TICHETS TO DATABASE----------------------
 
 insert into ticket(ticket_no,book_ref,passenger_id)
-  values(1,'abc123',1);
+  values(220101,'SFTO01',1);
 
 insert into ticket(ticket_no,book_ref,passenger_id)
-  values(2,'abc123',1);
+  values(15081,'MCSF02',1);
 
 insert into ticket(ticket_no,book_ref,passenger_id)
-  values(3,'abc123',1);
+  values(15802,'MCSF02',1);
 
 insert into ticket(ticket_no,book_ref,passenger_id)
-  values(4,'xxx123',2);
+  values(131222,'ZRMC01',2);
 
 insert into ticket(ticket_no,book_ref,passenger_id)
-    values(5,'aaa123',2);
+    values(131201,'ZRMC01',2);
 
 insert into ticket(ticket_no,book_ref,passenger_id)
-  values(6,'SFAM02',5);
+  values(131202,'SFAM02',5);
 
 insert into ticket(ticket_no,book_ref,passenger_id)
-    values(37005,'MDSK02',8);
+  values(37005,'MDSK02',8);
 
 insert into ticket(ticket_no,book_ref,passenger_id)
-    values(37006,'MDSK03',1);
+  values(37006,'MDSK03',1);
 
 insert into ticket(ticket_no,book_ref,passenger_id)
   values(37001,'TKAT02',8);
@@ -337,7 +381,7 @@ insert into ticket(ticket_no,book_ref,passenger_id)
 
 insert into ticket(ticket_no,book_ref,passenger_id)
   values(37004,'MCCR01',4);
------
+
 insert into ticket(ticket_no,book_ref,passenger_id)
   values(57004,'ATHT01',4);
 
@@ -380,51 +424,95 @@ insert into ticket(ticket_no,book_ref,passenger_id)
 insert into ticket(ticket_no,book_ref,passenger_id)
   values(254002,'MDLT01',1);
 
+insert into ticket(ticket_no,book_ref,passenger_id)
+    values(100501,'SPAT01',1);
+
+insert into ticket(ticket_no,book_ref,passenger_id)
+  values(110301,'SPAT02',9);
+
+insert into ticket(ticket_no,book_ref,passenger_id)
+  values(120401,'SPAT03',2);
+
+insert into ticket(ticket_no,book_ref,passenger_id)
+  values(260301,'SPAT04',3);
+
+insert into ticket(ticket_no,book_ref,passenger_id)
+  values(210601,'SPAT05',4);
+
+insert into ticket(ticket_no,book_ref,passenger_id)
+  values(100301,'SPAT06',5);
+
+insert into ticket(ticket_no,book_ref,passenger_id)
+  values(110901,'SPAT07',6);
+
+insert into ticket(ticket_no,book_ref,passenger_id)
+  values(110902,'SPAT08',7);
+
+insert into ticket(ticket_no,book_ref,passenger_id)
+  values(280601,'SPAT09',8);
+
+insert into ticket(ticket_no,book_ref,passenger_id)
+  values(220901,'SPAT10',10);
+
 --select * from ticket;
 ------------------------INSERT BOARDING_BASS TO DATABASE----------------------
 
-insert into boarding_pass(boarding_no,seat_no,ticket_no,flight_code,flight_status_name)
-  values(100,100,1,'MCHSFO01','Arrived');
+  insert into boarding_pass(boarding_no,seat_no,ticket_no,flight_code)
+    values(100,100,100501,'SPNATH01');
 
-insert into boarding_pass(boarding_no,seat_no,ticket_no,flight_code,flight_status_name)
-  values(101,70,2,'MCHSFO01','Arrived');
+  insert into boarding_pass(boarding_no,seat_no,ticket_no,flight_code)
+    values(101,70,110301,'SPNATH01');
 
-insert into boarding_pass(boarding_no,seat_no,ticket_no,flight_code,flight_status_name)
-  values(150,10,6,'MCHSFO01','Arrived');
+  insert into boarding_pass(boarding_no,seat_no,ticket_no,flight_code)
+    values(102,11,120401,'SPNATH01');
 
-insert into boarding_pass(boarding_no,seat_no,ticket_no,flight_code,flight_status_name)
-  values(101,50,2,'ZRCMCH01','Arrived');
+  insert into boarding_pass(boarding_no,seat_no,ticket_no,flight_code)
+    values(103,12,260301,'SPNATH01');
 
-insert into boarding_pass(boarding_no,seat_no,ticket_no,flight_code,flight_status_name)
-  values(100,100,3,'MCHSFO02','Cancelled');
+  insert into boarding_pass(boarding_no,seat_no,ticket_no,flight_code)
+    values(104,13,210601,'SPNATH01');
 
+  insert into boarding_pass(boarding_no,seat_no,ticket_no,flight_code)
+    values(105,16,100301,'SPNATH01');
+
+  insert into boarding_pass(boarding_no,seat_no,ticket_no,flight_code)
+    values(106,55,110901,'SPNATH01');
+
+  insert into boarding_pass(boarding_no,seat_no,ticket_no,flight_code)
+    values(107,18,110902,'SPNATH01');
+
+  insert into boarding_pass(boarding_no,seat_no,ticket_no,flight_code)
+    values(108,02,280601,'SPNATH01');
+
+  insert into boarding_pass(boarding_no,seat_no,ticket_no,flight_code)
+    values(109,06,220901,'SPNATH01');
 
 --select * from boarding_pass;
 ------------------------INSERT ROUTES TO DATABASE----------------------
 
 insert into routes(book_ref,ticket_no,flight_code,amount,fare)
-    values('abc123',1,'SFOTOK01',100.50,'EC');
+    values('SFTO01',220101,'SFOTOK01',100.50,'EC');
 
 insert into routes(book_ref,ticket_no,flight_code,amount,fare)
-    values('abc123',1,'MCHSFO02',349.90,'BC');
+    values('MCSF02',15081,'MCHSFO02',349.90,'BC');
 
 insert into routes(book_ref,ticket_no,flight_code,amount,fare)
-    values('abc123',1,'ZRCMCH01',49.00,'EC');
+    values('ZRMC01',131201,'ZRCMCH01',49.00,'EC');
 
 insert into routes(book_ref,ticket_no,flight_code,amount,fare)
-    values('abc123',1,'ATHCRT01',96.00,'BC');
+    values('ZRMC01',131202,'ATHCRT01',96.00,'BC');
 
-insert into routes(book_ref,ticket_no,flight_code,amount,fare)
-    values('TKAT02',37001,'TOKSNT01',650.00,'BC');
+--insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+  --  values('TKAT02',37001,'TOKSNT01',650.00,'BC');
 
-insert into routes(book_ref,ticket_no,flight_code,amount,fare)
-    values('TKAT02',37001,'SNTATH01',150.00,'BC');
+--insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+  --  values('TKAT02',37011,'SNTATH01',150.00,'BC');
 
-insert into routes(book_ref,ticket_no,flight_code,amount,fare)
-    values('AMCR02',37002,'AMSATH01',260.00,'EC');
+--insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+--    values('AMCR02',37002,'AMSATH01',260.00,'EC');
 
-insert into routes(book_ref,ticket_no,flight_code,amount,fare)
-    values('AMCR02',37002,'AMSATH01',260.00,'EC');
+--insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+  --  values('AMCR02',37002,'AMSATH01',260.00,'EC');
 
 insert into routes(book_ref,ticket_no,flight_code,amount,fare)
     values('MDSK02',37003,'MDRSKG01',260.00,'EC');
@@ -436,7 +524,7 @@ insert into routes(book_ref,ticket_no,flight_code,amount,fare)
     values('MCCR01',37004,'MCHCRT01',1260.00,'FC');
 
 insert into routes(book_ref,ticket_no,flight_code,amount,fare)
-    values('MDSK02',37005,'MDRSKG01',860.00,'EC');
+  values('MDSK02',37005,'MDRSKG01',860.00,'EC');
 
 insert into routes(book_ref,ticket_no,flight_code,amount,fare)
     values('MDSK02',37005,'CRTATH01',60.00,'EC');
@@ -483,3 +571,115 @@ insert into routes(book_ref,ticket_no,flight_code,amount,fare)
 insert into routes(book_ref,ticket_no,flight_code,amount,fare)
   values('MDLT01',254002,'MDRLTN01',180.00,'BC');
 
+  insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+    values('SPAT01',100501,'SPNATH01',150.00,'BC');
+
+  insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+    values('SPAT02',110301,'SPNATH01',80.00,'BC');
+
+  insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+    values('SPAT03',120401,'SPNATH01',95.00,'EC');
+
+  insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+    values('SPAT04',260301,'SPNATH01',120.00,'BC');
+
+  insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+    values('SPAT05',210601,'SPNATH01',50.00,'EC');
+
+  insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+    values('SPAT06',100301,'SPNATH01',50.00,'EC');
+
+  insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+    values('SPAT07',110901,'SPNATH01',250.00,'BC');
+
+  insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+    values('SPAT08',110902,'SPNATH01',240.00,'BC');
+
+  insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+    values('SPAT09',220901,'SPNATH01',80.00,'BC');
+
+
+--select * from routes;
+-----------------------------------2021-----------------------------------------
+
+insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
+values ('SNTATH02','SNT','ATH','2021-12-25',900,'2021-12-25 20:20:00 UTC','2021-12-25 21:00:00 UTC','2021-12-26 00:40:00 UTC','2021-12-25 20:20:00 UTC','2021-12-25 21:03:00 UTC','Arrived',500);
+
+insert into booking(book_ref,book_date)
+  values('SNAT03','2021-12-01');
+
+insert into booking(book_ref,book_date)
+  values('SNAT04','2021-12-11');
+
+insert into booking(book_ref,book_date)
+  values('SNAT05','2021-12-11');
+
+insert into ticket(ticket_no,book_ref,passenger_id)
+  values(011201,'SNAT03',7);
+
+insert into ticket(ticket_no,book_ref,passenger_id)
+  values(111202,'SNAT04',8);
+
+insert into ticket(ticket_no,book_ref,passenger_id)
+  values(111201,'SNAT05',9);
+
+insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+  values('SNAT03',011201,'SNTATH02',200,'EC');
+
+insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+  values('SNAT04',111202,'SNTATH02',300,'EC');
+
+insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+  values('SNAT05',111201,'SNTATH02',300,'EC');
+
+  insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
+   values ('GTWTOK02','TOK','MCH','2021-12-13',767,'2021-12-13 08:15:00 UTC','2021-12-13 09:15:00 UTC','2021-12-13 01:0:00 UTC','2021-12-13 08:15:00 UTC','2021-12-13 09:15:00 UTC','Arrived',600);
+
+  insert into booking(book_ref,book_date)
+    values('GTTO02','2021-12-11');
+
+  insert into ticket(ticket_no,book_ref,passenger_id)
+    values(111271,'GTTO02',1);
+
+  insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+   values('GTTO02',111271,'GTWTOK02',290,'EC');
+
+
+   insert into flight_details(flight_code,departure_airport,arrival_airport,departure_date,aircraft_code,scheduled_departure_time,scheduled_arrival_time,scheduled_duration,actual_departure_time,actual_arrival_time,flight_status_name,distance)
+     values ('MDRLTN02','MDR','LTN','2021-12-12',767,'2021-12-12 09:15:00 UTC','2021-12-12 11:00:00 UTC','2021-12-12 02:45:00 UTC','2021-12-12 09:15:00 UTC','2021-12-12 11:22:00 UTC','Arrived',1310);
+
+   insert into booking(book_ref,book_date)
+     values('MDLT02','2021-12-11');
+
+   insert into booking(book_ref,book_date)
+     values('MDLT03','2021-12-11');
+
+   insert into booking(book_ref,book_date)
+     values('MDLT04','2021-12-08');
+
+   insert into booking(book_ref,book_date)
+     values('MDLT05','2021-12-01');
+
+   insert into ticket(ticket_no,book_ref,passenger_id)
+     values(011291,'MDLT02',7);
+
+   insert into ticket(ticket_no,book_ref,passenger_id)
+     values(011292,'MDLT03',2);
+
+   insert into ticket(ticket_no,book_ref,passenger_id)
+    values(081291,'MDLT04',8);
+
+   insert into ticket(ticket_no,book_ref,passenger_id)
+    values(011281,'MDLT05',1);
+
+   insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+    values('MDLT02',011291,'MDRLTN02',290,'EC');
+
+   insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+    values('MDLT03',011292,'MDRLTN02',290,'BC');
+
+   insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+    values('MDLT04',081291,'MDRLTN02',280,'EC');
+
+   insert into routes(book_ref,ticket_no,flight_code,amount,fare)
+    values('MDLT05',011281,'MDRLTN02',180,'EC');
